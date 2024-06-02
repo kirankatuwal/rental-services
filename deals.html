@@ -2,41 +2,37 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>about</title>
 
     <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
     <!-- swiper css link  -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
 
     <!-- Favicon link for header -->
-    <link rel="icon" type="image/x-icon" href="images/logo.png">
-
+    <link rel="icon" type="image/x-icon" href="images/logo.png" />
 </head>
 
 <body>
-
     <div class="container">
-
         <section class="header">
-
             <a href="index.html" class="logo">SYD CAR RENTAL</a>
 
             <nav class="navbar">
                 <a href="index.html">home</a>
                 <a href="about.html">about</a>
                 <div class="dropdown">
-                    <a href="services.html">services</a>
+                    <a href="services.html" class="active">services</a>
                     <div class="dropdown-content">
                         <a href="vehicle.html">Vehicles</a>
-                        <a href="deals.html">Deals</a>
+                        <a href="deals.html" class="active">Deals</a>
                         <a href="locations.html">Locations</a>
                         <a href="insurance.html">Insurance</a>
                         <a href="reservation.html">Reservation</a>
@@ -55,104 +51,119 @@
             </nav>
 
             <div id="menu-btn" class="fas fa-bars"></div>
-
         </section>
-
 
         <section class="home">
-
-            <div class="slide" style="background:url(images/service-banner.jpg) no-repeat">
+            <div class="slide" style="background: url(images/deals.jpg) no-repeat">
                 <div class="content">
-                    <h3>Services</h3>
-                    <p>Our Services will make your wish fulfill.</p>
-                    <a href="#service" class="btn">Check Services</a>
+                    <h3>Thrifty Deals</h3>
+                    <p>
+                        Awesome deals are awaiting for you, just grap and have benifits.
+                    </p>
+                    <a href="#deals" class="btn">Check Deals</a>
                 </div>
             </div>
         </section>
 
-        <section class="care">
-            <h1 class="heading">We care for you</h1>
-            <h3 class="sub-heading">Our main principle is to support you before, during and after the rental.</h3>
-            <div class="content grid">
-                <div class="sub-content ">
-                    <div class="img-box">
-                        <img src="images/about-us-banner.jpg" alt="service-image" srcset="">
+        <section class="deals" id="deals">
+            <div class="deals-container">
+                <div class="slide">
+                    <img src="images/deal2.jpg" alt="">
+                    <div class="content">
+                        <h3>Book for 7 days, pay for 6*</h3>
+                        <p>T&C apply</p>
+                        <a href="contact.html" class="btn">Book Now</a>
                     </div>
                 </div>
-                <div class="sub-content grid-span2">
-                    <h3>plan your travel!</h3>
-                    <p>Take a ride and get to your destination on time with cost and fuel effectively</p>
-                    <div class="box-container flex">
-                        <div class="content flex-item1">
-                            <i class="fas fa-taxi"></i>
-
-                        </div>
-                        <div class="content flex-item2">
-                            <h2 class="topic-heading">
-                                Multi-language Support
-                            </h2>
-                            <p>We are readu to assist you with any questions in different languages.</p>
-                        </div>
-                    </div>
-                    <div class="box-container flex">
-                        <div class="content flex-item1">
-                            <i class="fas fa-car-side"></i>
-
-                        </div>
-                        <div class="content flex-item2">
-                            <h2 class="topic-heading">
-                                Multi-language Support
-                            </h2>
-                            <p>We are readu to assist you with any questions in different languages.</p>
-                        </div>
-                    </div>
-                    <div class="box-container flex">
-                        <div class="content flex-item1">
-                            <i class="fas fa-truck-pickup"></i>
-
-                        </div>
-                        <div class="content flex-item2">
-                            <h2 class="topic-heading">
-                                Multi-language Support
-                            </h2>
-                            <p>We are readu to assist you with any questions in different languages.</p>
-                        </div>
+                 <div class="slide">
+                    <img src="images/deal3.jpg" alt="">
+                    <div class="content">
+                        <h3>Save 20% on Weekends*</h3>
+                         <p>T&C apply</p>
+                        <a href="deals.html" class="btn">Book Now</a>
                     </div>
                 </div>
-
+                 <div class="slide">
+                    <img src="images/deal4.jpg" alt="">
+                    <div class="content">
+                        <h3>15% off EV's*</h3>
+                         <p>T&C apply</p>
+                        <a href="contact.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/deal5.jpg" alt="">
+                    <div class="content">
+                        <h3>Backseat Bandmates – Wiggles Fun Pack and Audio</h3>
+                        <p>T&C apply</p>
+                        <a href="contact.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+                 <div class="slide">
+                    <img src="images/deal6.jpg" alt="">
+                    <div class="content">
+                        <h3>Blue Chip members save 20% off 7+ Days*</h3>
+                         <p>T&C apply</p>
+                        <a href="deals.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+                 <div class="slide">
+                    <img src="images/deal1.jpg" alt="">
+                    <div class="content">
+                        <h3>Flash Sale: 25% off Weekends</h3>
+                         <p>T&C apply</p>
+                        <a href="contact.html" class="btn">Book Now</a>
+                    </div>
+                </div>
             </div>
         </section>
+
+
 
         <section class="footer">
-
             <div class="box-container">
-
                 <div class="box">
                     <h3>quick links</h3>
                     <a href="index.html"> <i class="fas fa-angle-right"></i> home</a>
                     <a href="about.html"> <i class="fas fa-angle-right"></i> about</a>
-                    <a href="services.html"> <i class="fas fa-angle-right"></i> services</a>
-                    <a href="gallery.html"> <i class="fas fa-angle-right"></i> gallery</a>
-                    <a href="partner.html"> <i class="fas fa-angle-right"></i> partner</a>
+                    <a href="services.html">
+                        <i class="fas fa-angle-right"></i> services</a>
+                    <a href="gallery.html">
+                        <i class="fas fa-angle-right"></i> gallery</a>
+                    <a href="partner.html">
+                        <i class="fas fa-angle-right"></i> partner</a>
                 </div>
 
                 <div class="box">
                     <h3>extra links</h3>
-                    <a href="vehicle.html"> <i class="fas fa-angle-right"></i> vehicle</a>
+                    <a href="vehicle.html">
+                        <i class="fas fa-angle-right"></i> vehicle</a>
                     <a href="deals.html"> <i class="fas fa-angle-right"></i> Deals</a>
-                    <a href="locations.html"> <i class="fas fa-angle-right"></i> Locations</a>
-                    <a href="insurance.html"> <i class="fas fa-angle-right"></i> insurance</a>
-                    <a href="reservation.html"> <i class="fas fa-angle-right"></i> reservation</a>
+                    <a href="locations.html">
+                        <i class="fas fa-angle-right"></i> Locations</a>
+                    <a href="insurance.html">
+                        <i class="fas fa-angle-right"></i> insurance</a>
+                    <a href="reservation.html">
+                        <i class="fas fa-angle-right"></i> reservation</a>
                 </div>
 
                 <div class="box">
                     <h3>contact info</h3>
-                    <a href="telto:+1234567890"> <i class="fas fa-phone"></i> +123-456-7890 </a>
-                    <a href="telto:1112223333"> <i class="fas fa-phone"></i> +111-222-3333 </a>
-                    <a href="mailto:sydneyrentalservice@gmail.com"> <i class="fas fa-envelope"></i>
-                        sydrentalservice@gmail.com </a>
-                    <a href="mailto:contacts@gmail.com"> <i class="fas fa-envelope"></i> contacts@gmail.com </a>
-                    <a href="#"> <i class="fas fa-map"></i> 12-15 abc street, Hopetown </a>
+                    <a href="telto:+1234567890">
+                        <i class="fas fa-phone"></i> +123-456-7890
+                    </a>
+                    <a href="telto:1112223333">
+                        <i class="fas fa-phone"></i> +111-222-3333
+                    </a>
+                    <a href="mailto:sydneyrentalservice@gmail.com">
+                        <i class="fas fa-envelope"></i> sydrentalservice@gmail.com
+                    </a>
+                    <a href="mailto:contacts@gmail.com">
+                        <i class="fas fa-envelope"></i> contacts@gmail.com
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-map"></i> 12-15 abc street, Hopetown
+                    </a>
                 </div>
 
                 <div class="box">
@@ -163,22 +174,19 @@
                     <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
                     <a href="#"> <i class="fab fa-github"></i> github </a>
                 </div>
-
             </div>
 
-            <p class="credit"> created by <span>Summit IT Company</span> | all rights reserved! </p>
-
+            <p class="credit">
+                created by <span>Summit IT Company</span> | all rights reserved!
+            </p>
         </section>
-
     </div>
-
 
     <!-- swiper js link  -->
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
     <!-- custom js file link  -->
     <script src="js/script.js"></script>
-
 </body>
 
 </html>

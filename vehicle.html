@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>
+    <title>Vehicle - Sydney Rental Services</title>
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -35,9 +35,9 @@
                 <a href="index.html">home</a>
                 <a href="about.html">about</a>
                 <div class="dropdown">
-                    <a href="services.html">services</a>
+                    <a href="services.html" class="active">services</a>
                     <div class="dropdown-content">
-                        <a href="vehicle.html">Vehicles</a>
+                        <a href="vehicle.html" class="active">Vehicles</a>
                         <a href="deals.html">Deals</a>
                         <a href="locations.html">Locations</a>
                         <a href="insurance.html">Insurance</a>
@@ -60,56 +60,53 @@
 
         </section>
 
-        <section class="portfolio">
-
-            <h1 class="heading">our Gallery</h1>
-
-            <div class="portfolio-container">
-
-                <a href="images/service-7.jpg" class="box">
-                    <div class="image">
-                        <img src="images/service-7.jpg" alt="">
-                    </div>
-                    <h3>Service 1</h3>
-                </a>
-
-                <a href="images/service-8.png" class="box">
-                    <div class="image">
-                        <img src="images/service-8.png" alt="">
-                    </div>
-                    <h3>Service 2</h3>
-                </a>
-
-                <a href="images/service-9.jpg" class="box">
-                    <div class="image">
-                        <img src="images/service-9.jpg" alt="">
-                    </div>
-                    <h3>Service 3</h3>
-                </a>
-
-                <a href="images/service-10.jpg" class="box">
-                    <div class="image">
-                        <img src="images/service-10.jpg" alt="">
-                    </div>
-                    <h3>Service 4</h3>
-                </a>
-
-                <a href="images/service-11.jpg" class="box">
-                    <div class="image">
-                        <img src="images/service-11.jpg" alt="">
-                    </div>
-                    <h3>Service 5</h3>
-                </a>
-
-                <a href="images/service-12.jpg" class="box">
-                    <div class="image">
-                        <img src="images/service-12.jpg" alt="">
-                    </div>
-                    <h3>Service 6</h3>
-                </a>
-
+        <section class="home">
+            <div class="slide" style="background: url(images/vehicle-banner.jpg) no-repeat">
+                <div class="content">
+                    <h3>Clean and New Vehicle</h3>
+                    <p>
+                        Check our our newly vehicle and their conditions.
+                    </p>
+                    <a href="#deals" class="btn">Check Now</a>
+                </div>
             </div>
+        </section>
 
+        <section class="deals" id="deals">
+            <div class="deals-container">
+                <div class="slide">
+                    <img src="images/vehicle1.jpg" alt="">
+                    <div class="content">
+                        <h3>Compact SUV Hybrid</h3>
+                        <p>Toyota C-HR Hybrid or similar</p>
+                        <a href="contact.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/vehicle2.jpg" alt="">
+                    <div class="content">
+                        <h3>Compact</h3>
+                        <p>Hyundai i30 or similar</p>
+                        <a href="deals.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/vehicle3.jpg" alt="">
+                    <div class="content">
+                        <h3>Intermediate SUV 2WD</h3>
+                        <p>Nissan X-TRAIL or similar</p>
+                        <a href="contact.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="images/vechile4.jpg" alt="">
+                    <div class="content">
+                        <h3>Fullsize Van 8 Seat</h3>
+                        <p>Kia Carnival or similar</p>
+                        <a href="contact.html" class="btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="footer">
@@ -120,7 +117,7 @@
                     <h3>quick links</h3>
                     <a href="home.php"> <i class="fas fa-angle-right"></i> home</a>
                     <a href="about.php"> <i class="fas fa-angle-right"></i> about</a>
-                    <a href="portfolio.php"> <i class="fas fa-angle-right"></i> portfolio</a>
+                    <a href="vehicle.php"> <i class="fas fa-angle-right"></i> vehicle</a>
                     <a href="pricing.php"> <i class="fas fa-angle-right"></i> pricing</a>
                     <a href="contact.php"> <i class="fas fa-angle-right"></i> contact</a>
                 </div>
@@ -184,7 +181,7 @@
 
     <script>
 
-        lightGallery(document.querySelector('.portfolio .portfolio-container'));
+        lightGallery(document.querySelector('.vehicle .vehicle-container'));
 
     </script>
 

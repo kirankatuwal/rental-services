@@ -139,7 +139,7 @@ html::-webkit-scrollbar-thumb {
 .sub-heading {
     text-align: center;
     text-transform: capitalize;
-    color: var(--grey);
+    color: var(--black);
     margin-bottom: 2rem;
     font-size: 2rem;
     font-weight: 400;
@@ -272,7 +272,8 @@ section {
 .home .slide .content {
     background: var(--transparent-white);
     border-radius: .5rem;
-    backdrop-filter: blur(.5rem);
+    backdrop-filter: blur(.9rem);
+    -webkit-backdrop-filter: blur(.9rem);
     box-shadow: var(--box-shadow);
     text-align: center;
     padding: 2rem;
@@ -335,7 +336,8 @@ section {
     left: 0;
     right: 0;
     background: var(--transparent-white);
-    backdrop-filter: blur(.5rem);
+    backdrop-filter: blur(.9rem);
+    -webkit-backdrop-filter: blur(.9rem);
     padding: 2rem;
     text-align: center;
     transition: .2s linear;
@@ -430,6 +432,63 @@ section {
     color: var(--white);
 }
 
+/* deals */
+.deals-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.deals .slide {
+    height: 35rem;
+    overflow: hidden;
+    position: relative;
+    user-select: none;
+    margin-bottom: 4rem;
+}
+
+.deals .slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.deals .slide:hover img {
+    transform: scale(1.1);
+}
+
+.deals .slide .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--transparent-white);
+    backdrop-filter: blur(.9rem);
+    -webkit-backdrop-filter: blur(.9rem);
+    padding: 2rem;
+    text-align: center;
+    transition: .2s linear;
+    transform: translateY(calc(100% - 6.5rem));
+}
+
+.deals .slide:hover .content {
+    transform: translateY(0);
+}
+
+.deals .slide .content h3 {
+    font-size: 2rem;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.deals .slide .content p {
+    font-size: 1.5rem;
+    color: var(--white);
+    padding: 1rem 0;
+    line-height: 2;
+}
+
 .about {
     text-align: center;
     margin: 0 auto;
@@ -460,6 +519,23 @@ section {
     line-height: 2;
     color: var(--black);
 }
+
+.about-us .content {
+    background: var(--transparent-white);
+    padding: 5rem 10rem;
+    -webkit-backdrop-filter: blur(.9rem);
+    backdrop-filter: blur(.9rem);
+}
+
+.about-us .content p {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    text-align: justify;
+    margin: 3.5rem;
+
+}
+
+/* ends about us */
 
 .team .box-container {
     display: grid;
