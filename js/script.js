@@ -62,3 +62,18 @@ var swiper = new Swiper(".reviews-slider", {
         },
     },
 });
+
+
+
+// When the user scrolls down 20px from the top of the document, show the button
+
+// var c = 0;
+// window.onscroll = function (event) {
+//     if (c < 1) {
+//         if (window.scrollY > 1000) {
+//             alert('Welcome to Sydney rental Services');
+//             c = c + 1;
+//         }
+//     }
+
+// }

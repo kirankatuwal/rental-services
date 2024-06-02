@@ -180,7 +180,7 @@ section {
 }
 
 .header {
-    position: sticky;
+    position: relative;
     z-index: 1000;
     background: var(--transparent-white);
     display: flex;
@@ -204,6 +204,11 @@ section {
     color: var(--black);
     text-transform: capitalize;
     position: relative;
+}
+
+.navbar a.active {
+    color: var(--black);
+    font-weight: 600;
 }
 
 .header .navbar a:hover {
@@ -245,6 +250,8 @@ section {
     cursor: pointer;
     display: none;
 }
+
+
 
 .home {
     padding-bottom: 0;
@@ -692,6 +699,7 @@ section {
     font-size: 1.5rem;
     color: var(--black);
     padding: 1rem 0;
+    text-transform: capitalize;
 }
 
 .footer .box-container .box a i {
