@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation - Sydney Rental Services</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- swiper css link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon link for header -->
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+
+    <!-- internal Styling -->
+
+    <style>
+        h4 {
+            color: #f0a500;
+            font-size: 2rem;
+            padding: 2rem 1rem;
+        }
+
+        input,
+        input[type="radio"]+label,
+        input[type="checkbox"]+label:before,
+        select option,
+        select {
+            width: 100%;
+            padding: 1em;
+            line-height: 1.4;
+            background-color: #f9f9f9;
+            border: 1px solid #e5e5e5;
+            border-radius: 3px;
+            -webkit-transition: 0.35s ease-in-out;
+            -moz-transition: 0.35s ease-in-out;
+            -o-transition: 0.35s ease-in-out;
+            transition: 0.35s ease-in-out;
+            transition: all 0.35s ease-in-out;
+            font-size: 1.4rem;
+        }
+
+        input:focus {
+            outline: 0;
+            border-color: #bd8200;
+        }
+
+        input:focus+.input-icon i {
+            color: #f0a500;
+        }
+
+        input:focus+.input-icon:after {
+            border-right-color: #f0a500;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        input[type="radio"]+label,
+        select {
+            width: 50%;
+            text-align: center;
+            border-radius: 0;
+            float: left;
+        }
+
+        input[type="radio"]+label:first-of-type {
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+
+        input[type="radio"]+label:last-of-type {
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+
+        input[type="radio"]+label i {
+            padding-right: 0.4em;
+        }
+
+        input[type="radio"]:checked+label,
+        input:checked+label:before,
+        select:focus,
+        select:active {
+            background-color: #f0a500;
+            color: #fff;
+            border-color: #bd8200;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        input[type="checkbox"]+label {
+            position: relative;
+            display: block;
+            padding-left: 1.6em;
+            font-size: 1.4rem;
+        }
+
+        input[type="checkbox"]+label:before {
+            position: absolute;
+            top: 0.2em;
+            left: 0;
+            display: block;
+            width: 1em;
+            height: 1em;
+            padding: 0;
+            content: "";
+        }
+
+        input[type="checkbox"]+label:after {
+            position: absolute;
+            top: 0.45em;
+            left: 0.2em;
+            font-size: 1.4rem;
+            color: #fff;
+            opacity: 0;
+            font-family: FontAwesome;
+            content: "\f00c";
+        }
+
+        input:checked+label:after {
+            opacity: 1;
+        }
+
+        select {
+            height: 3.4em;
+            line-height: 2;
+        }
+
+        select:first-of-type {
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+
+        select:last-of-type {
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+
+        select:focus,
+        select:active {
+            outline: 0;
+        }
+
+        select option {
+            background-color: #f0a500;
+            color: #fff;
+        }
+
+        .input-group {
+            margin-bottom: 1em;
+            zoom: 1;
+        }
+
+        .input-group:before,
+        .input-group:after {
+            content: "";
+            display: table;
+        }
+
+        .input-group:after {
+            clear: both;
+        }
+
+        .input-group-icon {
+            position: relative;
+        }
+
+        .input-group-icon input {
+            padding-left: 4.4em;
+        }
+
+        .input-group-icon .input-icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3.4em;
+            height: 3.4em;
+            line-height: 3.4em;
+            text-align: center;
+            pointer-events: none;
+        }
+
+        .input-group-icon .input-icon:after {
+            position: absolute;
+            top: 0.6em;
+            bottom: 0.6em;
+            left: 3.4em;
+            display: block;
+            border-right: 1px solid #e5e5e5;
+            content: "";
+            -webkit-transition: 0.35s ease-in-out;
+            -moz-transition: 0.35s ease-in-out;
+            -o-transition: 0.35s ease-in-out;
+            transition: 0.35s ease-in-out;
+            transition: all 0.35s ease-in-out;
+        }
+
+        .input-group-icon .input-icon i {
+            -webkit-transition: 0.35s ease-in-out;
+            -moz-transition: 0.35s ease-in-out;
+            -o-transition: 0.35s ease-in-out;
+            transition: 0.35s ease-in-out;
+            transition: all 0.35s ease-in-out;
+
+        }
+
+        .reserve-container {
+            max-width: 80rem;
+            padding: 1em 3em 2em 3em;
+            margin: 2rem auto;
+            background-color: #fff;
+            border-radius: 4.2px;
+            box-shadow: 0px 3px 10px -2px rgba(0, 0, 0, 0.2);
+            border-radius: 2rem;
+        }
+
+        .row {
+            zoom: 1;
+        }
+
+        .row:before,
+        .row:after {
+            content: "";
+            display: table;
+        }
+
+        .row:after {
+            clear: both;
+        }
+
+        .col-half {
+            padding-right: 10px;
+            float: left;
+            width: 50%;
+        }
+
+        .col-half:last-of-type {
+            padding-right: 0;
+        }
+
+        .col-third {
+            padding-right: 10px;
+            float: left;
+            width: 33.33333333%;
+        }
+
+        .col-third:last-of-type {
+            padding-right: 0;
+        }
+
+        @media only screen and (max-width: 540px) {
+            .col-half {
+                width: 100%;
+                padding-right: 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <section class="header">
+
+            <a href="index.html" class="logo">SYD CAR RENTAL</a>
+
+            <nav class="navbar" id="navbar">
+                <a href="index.html">home</a>
+                <a href="about.html">about</a>
+                <div class="dropdown">
+                    <a href="services.html" class="active">services</a>
+                    <div class="dropdown-content">
+                        <a href="vehicle.html">Vehicles</a>
+                        <a href="deals.html">Deals</a>
+                        <a href="locations.html">Locations</a>
+                        <a href="insurance.html">Insurance</a>
+                        <a href="reservation.html" class="active">Reservation</a>
+                    </div>
+                </div>
+                <a href="gallery.html">gallery</a>
+                <div class="dropdown">
+                    <a href="partner.html">partner</a>
+                    <div class="dropdown-content">
+                        <a href="testimonial.html">Partnar Testimonial</a>
+                    </div>
+                </div>
+                <a href="contact.html">contact</a>
+                <a href="career.html">career</a>
+                <a href="reference.html">reference</a>
+            </nav>
+
+            <div id="menu-btn" class="fas fa-bars"></div>
+
+        </section>
+
+        <section class="home">
+
+            <div class="slide" style="background:url(images/reserv.jpg) no-repeat">
+                <div class="content">
+                    <h3>Reservation</h3>
+                    <p>Let's sit together and make the correct decisions.</p>
+                    <a href="#reservation" class="btn">Book Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="reservation" id="reservation">
+            <div class="box-container">
+                <h3 class="heading">Reserve Now</h3>
+
+                <div class="reserve-container">
+                    <form>
+                        <div class="row">
+                            <h4>Account</h4>
+                            <div class="input-group input-group-icon">
+                                <input type="text" placeholder="Full Name" />
+                                <div class="input-icon">
+                                    <i class="fa fa-user"></i>
+                                </div>
+                            </div>
+                            <div class="input-group input-group-icon">
+                                <input type="email" placeholder="Email Address" />
+                                <div class="input-icon">
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                            </div>
+                            <div class="input-group input-group-icon">
+                                <input type="password" placeholder="Password" />
+                                <div class="input-icon">
+                                    <i class="fa fa-key"></i>
+                                </div>
+                            </div>
+                            <div class="input-group input-group-icon">
+                                <select>
+                                    <option>Choose Vehicle</option>
+                                    <option>BMW</option>
+                                    <option>Toyota</option>
+                                    <option>Mazda</option>
+                                    <option>Camry</option>
+                                    <option>Nisan</option>
+                                </select>
+
+                            </div>
+                            <div class="input-group input-group-icon">
+                                <input type="date" placeholder="Date" />
+                                <div class="input-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-half">
+                                <h4>Date of Birth</h4>
+                                <div class="input-group">
+                                    <div class="col-third">
+                                        <input type="text" placeholder="DD" />
+                                    </div>
+                                    <div class="col-third">
+                                        <input type="text" placeholder="MM" />
+                                    </div>
+                                    <div class="col-third">
+                                        <input type="text" placeholder="YYYY" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-half">
+                                <h4>Gender</h4>
+                                <div class="input-group">
+                                    <input id="gender-male" type="radio" name="gender" value="male" />
+                                    <label for="gender-male">Male</label>
+                                    <input id="gender-female" type="radio" name="gender" value="female" />
+                                    <label for="gender-female">Female</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h4>Payment Details</h4>
+                            <div class="input-group">
+                                <input id="payment-method-card" type="radio" name="payment-method" value="card"
+                                    checked="true" />
+                                <label for="payment-method-card">
+                                    <span>
+                                        <i class="fab fa-cc-visa"></i>
+                                        Credit Card
+                                    </span>
+                                </label>
+                                <input id="payment-method-paypal" type="radio" name="payment-method" value="paypal" />
+                                <label for="payment-method-paypal">
+                                    <span>
+                                        <i class="fab fa-paypal"></i>
+                                        Paypal
+                                    </span>
+                                </label>
+                            </div>
+
+
+                            <div class="input-group input-group-icon">
+                                <input type="text" placeholder="Card Number" />
+                                <div class="input-icon">
+                                    <i class="fa fa-credit-card"></i>
+                                </div>
+                            </div>
+
+                            <div class="col-half">
+                                <div class="input-group input-group-icon">
+                                    <input type="text" placeholder="Card CVC" />
+                                    <div class="input-icon">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-half">
+                                <div class="input-group">
+                                    <select>
+                                        <option>01 Jan</option>
+                                        <option>02 Jan</option>
+                                    </select>
+                                    <select>
+                                        <option>2015</option>
+                                        <option>2016</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h4>Terms and Conditions</h4>
+                            <div class="input-group">
+                                <input id="terms" type="checkbox" />
+                                <label for="terms">
+                                    I accept the terms and conditions for signing up to this service, and hereby confirm
+                                    I have read the
+                                    privacy policy.
+                                </label>
+                            </div>
+                        </div>
+                        <a href="#reservation" class="btn">Book Now</a>
+                    </form>
+                </div>
+
+
+
+            </div>
+        </section>
+
+
+        <section class="footer">
+
+            <div class="box-container">
+
+                <div class="box">
+                    <h3>quick links</h3>
+                    <a href="index.html"> <i class="fas fa-angle-right"></i> home</a>
+                    <a href="about.html"> <i class="fas fa-angle-right"></i> about</a>
+                    <a href="services.html"> <i class="fas fa-angle-right"></i> services</a>
+                    <a href="gallery.html"> <i class="fas fa-angle-right"></i> gallery</a>
+                    <a href="partner.html"> <i class="fas fa-angle-right"></i> partner</a>
+                </div>
+
+                <div class="box">
+                    <h3>extra links</h3>
+                    <a href="vehicle.html"> <i class="fas fa-angle-right"></i> vehicle</a>
+                    <a href="deals.html"> <i class="fas fa-angle-right"></i> Deals</a>
+                    <a href="locations.html"> <i class="fas fa-angle-right"></i> Locations</a>
+                    <a href="insurance.html"> <i class="fas fa-angle-right"></i> insurance</a>
+                    <a href="reservation.html"> <i class="fas fa-angle-right"></i> reservation</a>
+                </div>
+
+                <div class="box">
+                    <h3>contact info</h3>
+                    <a href="telto:+1234567890"> <i class="fas fa-phone"></i> +123-456-7890 </a>
+                    <a href="telto:1112223333"> <i class="fas fa-phone"></i> +111-222-3333 </a>
+                    <a href="mailto:sydneyrentalservice@gmail.com"> <i class="fas fa-envelope"></i>
+                        sydrentalservice@gmail.com </a>
+                    <a href="mailto:contacts@gmail.com"> <i class="fas fa-envelope"></i> contacts@gmail.com </a>
+                    <a href="#"> <i class="fas fa-map"></i> 12-15 abc street, Hopetown </a>
+                </div>
+
+                <div class="box">
+                    <h3>follow us</h3>
+                    <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+                    <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+                    <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+                    <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+                    <a href="#"> <i class="fab fa-youtube"></i> youtube </a>
+                </div>
+
+            </div>
+
+            <p class="credit"> created by <span>Summit IT Company</span> | all rights reserved! </p>
+
+        </section>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- swiper js link  -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

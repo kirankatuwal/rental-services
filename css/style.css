@@ -439,6 +439,11 @@ section {
     gap: 1.5rem;
 }
 
+.deals-container.career .content h3,
+.deals-container.career .content p {
+    color: var(--black) !important;
+}
+
 .deals .slide {
     height: 35rem;
     overflow: hidden;
@@ -520,14 +525,16 @@ section {
     color: var(--black);
 }
 
-.about-us .content {
+.about-us .content,
+.location .content {
     background: var(--transparent-white);
     padding: 5rem 10rem;
     -webkit-backdrop-filter: blur(.9rem);
     backdrop-filter: blur(.9rem);
 }
 
-.about-us .content p {
+.about-us .content p,
+.location .content p {
     font-size: 1.4rem;
     line-height: 2rem;
     text-align: justify;
@@ -537,9 +544,77 @@ section {
 
 /* ends about us */
 
+/* locations */
+.location .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 2rem;
+}
+
+.location .img-content {
+    max-width: 100%;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.location .img-content img {
+    border-radius: 2rem;
+    filter: grayscale(100%);
+}
+
+.location .img-content:hover img {
+    filter: saturate(100%);
+    transition: all 0.8s ease-in;
+}
+
+.location .subheading {
+    font-size: 3.5rem;
+    text-align: center;
+    color: var(--pink);
+}
+
+.location ul li {
+    padding: 2rem;
+    list-style-type: none;
+    font-size: 2.5rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* location end */
+
+/* policies */
+
+.blur-box {
+    background-color: var(--transparent-white);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 1rem auto;
+
+}
+
+.blur-box .subheading {
+    font-size: 2rem;
+}
+
+.blur-box p {
+    font-size: 1.6rem !important;
+}
+
+.blur-box span a {
+    color: var(--pink);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+figcaption {
+    font-size: 2.2rem;
+}
+
 .team .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
     gap: 1.5rem;
 }
 

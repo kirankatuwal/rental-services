@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>contact</title>
+    <title>Contact - Sydeny Rental Services</title>
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
 
     <!-- swiper css link  -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
@@ -49,7 +51,7 @@
                         <a href="testimonial.html">Partnar Testimonial</a>
                     </div>
                 </div>
-                <a href="contact.html">contact</a>
+                <a href="contact.html" class="active">contact</a>
                 <a href="career.html">career</a>
                 <a href="reference.html">reference</a>
             </nav>
@@ -58,7 +60,19 @@
 
         </section>
 
-        <section class="contact">
+        <section class="home">
+            <div class="slide" style="background: url(images/contact.jpg) no-repeat">
+                <div class="content">
+                    <h3>Contact Us </h3>
+                    <p>
+                        We are 24/7 available for you !!
+                    </p>
+                    <a href="#conact" class="btn">Leave Message</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
 
             <h1 class="heading">contact us</h1>
 
@@ -77,16 +91,16 @@
                     </div>
 
                     <div class="inputBox">
-                        <span>your number</span>
-                        <input type="number" placeholder="enter your number" name="number" required>
+                        <span>Phone number</span>
+                        <input type="number" placeholder="enter mobile number" name="number" required>
                     </div>
 
                     <div class="inputBox">
-                        <span>choose plan</span>
+                        <span>choose vehicle</span>
                         <select name="plan">
-                            <option value="basic">basic plan</option>
-                            <option value="premium">premium plan</option>
-                            <option value="ultimate">ultimate plan</option>
+                            <option value="Sedan">Sedan</option>
+                            <option value="Hash Back">Hash Back</option>
+                            <option value="SUV">SUV</option>
                         </select>
                     </div>
 
